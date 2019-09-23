@@ -65,6 +65,11 @@ body{
     pointer: cursor;
     text-transform: uppercase;
 }
+
+#myTable
+{
+    padding:20px;
+}
 /*
 .tog
 {

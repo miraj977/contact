@@ -9,16 +9,23 @@ index page for contact us
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php
-                        if (isset($_GET['error'])) {
-                            echo '<center><div class="alert alert-danger alert-dismissible" style="width:fit-content;">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-						Invalid Username or password.</div></center>';
-                        }
-                        ?>
+
         <div class="contact-form">
+            <?php
+            if (isset($_GET['error'])) {
+                echo '<center><div class="alert alert-danger alert-dismissible" style="width:fit-content;">
+						<a href="index.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						Sorry, something went wrong.</div></center>';
+            }
+            if (isset($_GET['success'])) {
+                echo '<center><div class="alert alert-success alert-dismissible" style="width:fit-content;">
+						<a href="index.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						Thank you. Your message has been successfully submitted.</div></center>';
+            }
+            ?>
 
             <form method="POST" action="functions/functions.php" id="contact">             
                 <h1>Contact Form</h1><br>

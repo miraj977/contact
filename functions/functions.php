@@ -18,14 +18,14 @@ if (isset($_POST["submit"])) {
     $message = mysqli_real_escape_string($conn, ucfirst($_POST['message']));
     $active=1;
     
-    $sql = "INSERT INTO `contact_q` (`fname`, `uname`,`email`,`phone`,`institute`,`role`,`message`,`active`) VALUES 
+    $sql = "INSERT INTO `contact_q` (`fname`, `lname`,`email`,`phone`,`institute`,`role`,`message`,`active`) VALUES 
 		('" . $fname . "','" . $lname . "', '" . $email . "', '" . $phone . "', '" . $institute . "','" . $role . "', '" . $message . "','" . $active . "');";
-echo $sql; exit;
+//echo $sql; exit;
         $query = mysqli_query($conn, $sql);
         if ($query > 0) {
-            header("location:index.html?success");
+            header("location:../index.php?success");
         } else {
-            header("location:index.html?error");
+            header("location:../index.php?error");
         }
     
 }
