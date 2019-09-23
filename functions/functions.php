@@ -15,17 +15,17 @@ if (isset($_POST["submit"])) {
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
     $institute = mysqli_real_escape_string($conn, ucfirst($_POST['institute']));
     $role = mysqli_real_escape_string($conn, ucfirst($_POST['role']));
-    $message = mysqli_real_escape_string($conn, $_POST['message']);
+    $message = mysqli_real_escape_string($conn, ucfirst($_POST['message']));
     $active=1;
     
     $sql = "INSERT INTO `contact_q` (`fname`, `uname`,`email`,`phone`,`institute`,`role`,`message`,`active`) VALUES 
 		('" . $fname . "','" . $lname . "', '" . $email . "', '" . $phone . "', '" . $institute . "','" . $role . "', '" . $message . "','" . $active . "');";
-//echo $sql; exit;
+echo $sql; exit;
         $query = mysqli_query($conn, $sql);
         if ($query > 0) {
             header("location:index.html?success");
         } else {
-            header("location:register.php?fail");
+            header("location:index.html?error");
         }
     
 }

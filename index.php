@@ -11,6 +11,13 @@ index page for contact us
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
+        <?php
+                        if (isset($_GET['error'])) {
+                            echo '<center><div class="alert alert-danger alert-dismissible" style="width:fit-content;">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						Invalid Username or password.</div></center>';
+                        }
+                        ?>
         <div class="contact-form">
 
             <form method="POST" action="functions/functions.php" id="contact">             
