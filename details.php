@@ -4,7 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+//DB connection
 require 'functions/connect.php';
 ?>
 <!DOCTYPE html>
@@ -46,8 +46,8 @@ require 'functions/connect.php';
                     <h3>Message</h3>
                     <p><?php echo $message; ?></p>
                     <center><a href="mailto:<?php echo $email; ?>">
-                             <button class="btn btn-success btn-lg">Reply</button>
-                            </a>
+                            <button class="btn btn-success btn-lg">Reply</button>
+                        </a>
                     </center>
 
 

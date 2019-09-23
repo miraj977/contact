@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2019 at 02:57 AM
+-- Generation Time: Sep 23, 2019 at 03:28 AM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -46,6 +46,26 @@ INSERT INTO `contact_q` (`fname`, `lname`, `email`, `phone`, `institute`, `role`
 ('Miraj', 'Aryal', 'mirajaryal@gmail.com', '411381165', 'Fed', 'Gradd', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 1, 1),
 ('Nirusha', 'Khadka', 'nirushakhadka977@gmail.com', '411381165', 'AIa', 'Chidlcare educator', 'THis is a stest', 1, 2);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE IF NOT EXISTS `login` (
+  `id` int(11) NOT NULL,
+  `username` text NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `username`, `password`) VALUES
+(0, 'admin', 'admin'),
+(1, 'admin', 'admin');
+
 --
 -- Indexes for dumped tables
 --
@@ -54,6 +74,12 @@ INSERT INTO `contact_q` (`fname`, `lname`, `email`, `phone`, `institute`, `role`
 -- Indexes for table `contact_q`
 --
 ALTER TABLE `contact_q`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --

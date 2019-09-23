@@ -20,13 +20,18 @@ index page for contact us
 						<a href="index.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 						Sorry, something went wrong.</div></center>';
             }
+             if (isset($_GET['crederror'])) {
+                echo '<center><div class="alert alert-danger alert-dismissible" style="width:fit-content;">
+						<a href="index.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						Please check your login credential.</div></center>';
+            }
             if (isset($_GET['success'])) {
                 echo '<center><div class="alert alert-success alert-dismissible" style="width:fit-content;">
 						<a href="index.php" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 						Thank you. Your message has been successfully submitted.</div></center>';
             }
             ?>
-
+<!--            Contact form starts here-->
             <form method="POST" action="functions/functions.php" id="contact">             
                 <h1>Contact Form</h1><br>
                 <input class="form-control"  type="text" name="fname" placeholder="Your first name here" required="required">
@@ -37,23 +42,34 @@ index page for contact us
                 <input class="form-control"  type="text" name="role" placeholder="Please enter your role" required="required">
                 <textarea class="form-control" name="message" placeholder="Please type your message here" rows="4" cols="50" required></textarea><br>
 
-                <button class="form-control btn btn-primary" name="submit"  type="submit" value="Submit">Submit</button>
+                <button class="form-control btn btn-primary" name="submit"  type="submit" value="Submit">Submit</button><br>
+                <p class="tog"><a href="#">Clickview Staff?</a></p>
+            </form>
+            
+<!--            Login form starts here-->
 
+            <form method="POST" action="functions/functions.php" id="login">             
+                <h1>Login</h1><br>
+                <input class="form-control"  type="text" name="username" placeholder="Your username here" required="required">
+                <input class="form-control"  type="password" name="password" minlength="4" required="required">
+
+                <button class="form-control btn btn-primary" name="login"  type="submit">Login</button><br>
+                <p class="tog"><a href="#">Not a Clickview Staff?</a></p>
             </form>
 
         </div>
 
-        <!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script>
-                $('.tog a').click(function(){
-                    $('form').animate({height:"toggle",opacity:"toggle"},"slow");
-                });
-                
-                $(function(){
-            $("input[name=fname]")[0].oninvalid = function () {
-                this.setCustomValidity("Please enter characters.");
-            };
-        });
-                </script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $('.tog a').click(function () {
+                $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+            });
+
+            $(function () {
+                $("input[name=fname]")[0].oninvalid = function () {
+                    this.setCustomValidity("Please enter characters.");
+                };
+            });
+        </script>
     </body>
 </html>

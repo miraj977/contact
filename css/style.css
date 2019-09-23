@@ -28,7 +28,7 @@ body{
     text-align: center;
 }
 
-#contact
+#contact, #login
 {
     text-align: center;
     position: relative;
@@ -36,7 +36,7 @@ body{
     background:#ffff;
     max-width: 460px;
     padding:40px;
-    
+
 }
 
 #login{
@@ -44,6 +44,18 @@ body{
 }
 
 #contact input{
+    font-family: "Roboto","sans-serif";
+    outline: 1;
+    background: #F9F9F9;
+    width:100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: box-border;
+    font-size: 14px;
+}
+
+#login input{
     font-family: "Roboto","sans-serif";
     outline: 1;
     background: #F9F9F9;
@@ -86,7 +98,7 @@ body{
     border-bottom: 1px #F9F9F9 solid;
 }
 
-/*
+
 .tog
 {
     margin: 14px 0px -24px;
@@ -105,6 +117,6 @@ body{
     background-color: #005cbf;
     padding: 12px;
     color:#fff;
-}*/
+}
 
 

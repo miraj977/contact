@@ -21,6 +21,7 @@ require 'functions/connect.php';
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
     </head>
     <body>
+
         <br><br>
         <?php $i = 1; ?>
 
@@ -48,24 +49,30 @@ require 'functions/connect.php';
                         <td><?php echo $fname . ' ' . $lname; ?></td>
                         <td><?php echo $email; ?></td>
                         <td class="hidden-xs"><?php echo $phone; ?></td>
-                        <td><?php echo $institute;?></td>
+                        <td><?php echo $institute; ?></td>
                         <td class="ph hidden-xs"><?php echo $role; ?></td>
-                        <td><?php echo substr($message, 0, 25). ' <a  class="detailsanchor" href="details.php?&id='.$id.'"> ....Readmore</a>'; ?></td>
+                        <td><?php echo substr($message, 0, 25) . ' <a  class="detailsanchor" href="details.php?&id=' . $id . '"> ....Readmore</a>'; ?></td>
                     </tr>
-                    <?php $i++;
+                    <?php
+                    $i++;
                 }
                 ?>
             </tbody>
         </table>
         <br />
+    <center>
+        <a href="index.php">
+            <button class="btn btn-primary btn-md">Back to contact form</button>
+        </a>
+    </center>
 
 
 
-        <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script>
-            $(function () {
-                $("#myTable").DataTable();
-            });
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(function () {
+            $("#myTable").DataTable();
+        });
 
 
-        </script>
+    </script>
