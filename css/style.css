@@ -35,7 +35,7 @@ body{
     z-index: 1;
     background:#ffff;
     max-width: 460px;
-    padding:45px;
+    padding:40px;
     
 }
 
@@ -74,6 +74,16 @@ body{
 .detailsanchor
 {
     text-decoration: none;
+}
+
+.container
+{
+    color:white;
+}
+
+.qdetail
+{
+    border-bottom: 1px #F9F9F9 solid;
 }
 
 /*

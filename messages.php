@@ -50,7 +50,7 @@ require 'functions/connect.php';
                         <td class="hidden-xs"><?php echo $phone; ?></td>
                         <td><?php echo $institute;?></td>
                         <td class="ph hidden-xs"><?php echo $role; ?></td>
-                        <td><?php echo substr($message, 0, 25). ' <a  class="detailsanchor" href="details.php?'.$id.'"> ....Readmore</a>'; ?></td>
+                        <td><?php echo substr($message, 0, 25). ' <a  class="detailsanchor" href="details.php?&id='.$id.'"> ....Readmore</a>'; ?></td>
                     </tr>
                     <?php $i++;
                 }
