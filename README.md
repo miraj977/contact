@@ -1,5 +1,5 @@
 # Project: Contact
-Clickview Contact Module
+Contact Module developed for interview process of ClickView IT.
 This is a basic contact module created for customers to contact ClickView with their queries.
 
 The code is written in PHP and HTML.
